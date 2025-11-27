@@ -1,0 +1,2257 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Guia de Orlando by Dirceu – Parques, Ingressos, Dicas e Resort Fees</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      --primary: #0052cc;
+      --primary-dark: #003a8c;
+      --accent: #ff9f1c;
+      --bg: #f4f6fb;
+      --card-bg: #ffffff;
+      --text-main: #1f2933;
+      --text-muted: #6b778c;
+      --radius-lg: 14px;
+      --shadow-soft: 0 10px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(90deg, #001738, #002b72);
+      color: #fff;
+      padding: 10px 24px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 22px;
+      letter-spacing: 0.04em;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 13px;
+    }
+
+    nav a {
+      color: #e5ecff;
+      text-decoration: none;
+      padding: 6px 10px;
+      border-radius: 999px;
+      transition: background 0.2s, color 0.2s;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: rgba(255,255,255,0.4);
+    }
+
+    main {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 16px 16px 40px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 24px;
+      align-items: center;
+      padding: 26px 20px;
+      margin-top: 16px;
+      border-radius: 22px;
+      background: radial-gradient(circle at top left, #2563eb 0, #0b1020 45%, #020617 100%);
+      color: #e5ecff;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .hero h2 {
+      margin-top: 0;
+      font-size: 28px;
+    }
+
+    .hero p {
+      margin-bottom: 16px;
+      max-width: 480px;
+      color: #c7d2fe;
+    }
+
+    .hero-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .badge {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15, 118, 255, 0.18);
+      border: 1px solid rgba(191, 219, 254, 0.5);
+      color: #e0ecff;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      background: var(--accent);
+      color: #1b1b1f;
+      font-weight: 600;
+      font-size: 14px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+      transition: transform 0.15s, box-shadow 0.15s, background 0.2s;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 16px 30px rgba(0,0,0,0.4);
+      background: #ffb341;
+    }
+
+    .hero-side {
+      position: relative;
+      border-radius: 20px;
+      overflow: hidden;
+      background: #020617;
+      min-height: 210px;
+    }
+
+    .hero-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      opacity: 0.9;
+    }
+
+    .hero-tag {
+      position: absolute;
+      left: 14px;
+      bottom: 14px;
+      background: rgba(15, 23, 42, 0.9);
+      color: #e5ecff;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 11px;
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(148, 163, 184, 0.5);
+    }
+
+    /* Sections */
+    .section {
+      margin-top: 32px;
+    }
+
+    .section-card {
+      background: var(--card-bg);
+      border-radius: var(--radius-lg);
+      padding: 20px 20px 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .section h2 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .section p {
+      margin-top: 0;
+    }
+
+    .muted {
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+      margin-top: 12px;
+    }
+
+    .card {
+      background: #f9fafb;
+      border-radius: 14px;
+      padding: 14px 14px 16px;
+      border: 1px solid #e5e7eb;
+      transition: transform 0.15s, box-shadow 0.15s, border 0.15s;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
+      border-color: #cbd5f5;
+    }
+
+    .card h3 {
+      margin-top: 0;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 4px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #e0ecff;
+      color: #1d4ed8;
+    }
+
+    ul {
+      padding-left: 18px;
+      margin: 6px 0 0;
+    }
+
+    .subsection-title {
+      margin-top: 18px;
+      margin-bottom: 4px;
+      font-size: 17px;
+    }
+
+    /* Tables */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 13px;
+      background: #f9fafb;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    th, td {
+      padding: 8px 10px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+    }
+
+    th {
+      background: #e5edff;
+      font-weight: 600;
+      color: #1f2937;
+    }
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    tr:nth-child(even) td {
+      background: #fdfdff;
+    }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 12px;
+      background: #eff1f6;
+      padding: 1px 4px;
+      border-radius: 4px;
+    }
+
+    footer {
+      background: #020617;
+      color: #9ca3af;
+      text-align: center;
+      padding: 16px;
+      font-size: 12px;
+      margin-top: 24px;
+    }
+
+    @media (max-width: 800px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Guia de Orlando by Dirceu</h1>
+      <nav>
+        <a href="#inicio">Início</a>
+        <a href="#parques">Parques</a>
+        <a href="#roteiros">Roteiros</a>
+        <a href="#ingressos">Ingressos</a>
+        <a href="#hospedagem">Hospedagem</a>
+        <a href="#transporte">Transporte</a>
+        <a href="#compras">Compras</a>
+        <a href="#resort-fees">Resort Fees</a>
+        <a href="#dicas-orlando">Dicas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section" id="inicio">
+      <div class="hero">
+        <div>
+          <div class="hero-badges">
+            <span class="badge">Parques</span>
+            <span class="badge">Ingressos</span>
+            <span class="badge">Resort Fees</span>
+          </div>
+          <h2>Orlando em detalhes, em português</h2>
+          <p>
+            Guia completo para planejar sua viagem a Orlando: parques, tipos de ingressos e janelas de utilização,
+            hotéis, resort fees, transporte, compras e dicas práticas para aproveitar cada dia.
+          </p>
+          <a class="btn-primary" href="#ingressos">
+            Ver tabela de ingressos e janelas
+          </a>
+        </div>
+        <div class="hero-side">
+          
+          <img src="https://www.azulviagens.com.br/assets/images/azul-viagens-logo.png"
+     alt="Logo Azul Viagens"
+     style="width:220px; display:block; margin:0 auto;">
+          <div class="hero-tag">Dica: comece sempre pelo planejamento dos ingressos e dias de parque.</div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- PARQUES -->
+    <section class="section" id="parques">
+      <div class="section-card">
+        <h2>Parques Temáticos de Orlando</h2>
+        <p class="muted">
+          Um resumo rápido dos principais complexos para você decidir onde investir seus dias de viagem.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <h3>Walt Disney World</h3>
+            <div class="pill-row">
+              <span class="pill">Famílias</span>
+              <span class="pill">Crianças</span>
+              <span class="pill">Experiência clássica</span>
+            </div>
+            <ul>
+              <li><strong>Magic Kingdom:</strong> castelo, clássicos da Disney, ideal para primeira viagem.</li>
+              <li><strong>EPCOT:</strong> tecnologia, países e gastronomia.</li>
+              <li><strong>Hollywood Studios:</strong> Star Wars, Toy Story e atrações mais radicais.</li>
+              <li><strong>Animal Kingdom:</strong> natureza, safári e área de Avatar.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Universal Orlando Resort</h3>
+            <div class="pill-row">
+              <span class="pill">Adrenalina</span>
+              <span class="pill">Harry Potter</span>
+            </div>
+            <ul>
+              <li><strong>Universal Studios:</strong> filmes, simuladores e atrações imersivas.</li>
+              <li><strong>Islands of Adventure:</strong> montanhas-russas, Marvel, Jurassic Park.</li>
+              <li><strong>Volcano Bay:</strong> parque aquático temático com toboáguas.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>SeaWorld, Busch Gardens &amp; outros</h3>
+            <ul>
+              <li><strong>SeaWorld:</strong> misto de atrações e animais marinhos.</li>
+              <li><strong>Busch Gardens:</strong> parque em Tampa, foco em montanhas-russas intensas.</li>
+              <li><strong>LEGOLAND:</strong> perfeito para crianças menores.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="section" id="parques-detalhados">
+  <div class="section-card">
+    <h2>Guia Detalhado dos Parques de Orlando</h2>
+    <p class="muted">Alturas mínimas, principais atrações, nível de adrenalina e tempo médio de fila.</p>
+
+    <style>
+      .park-box { margin-bottom: 22px; border: 1px solid #d1d5db; border-radius: 12px; }
+      .park-header {
+        background: #f1f5f9;
+        padding: 14px 16px;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 12px 12px 0 0;
+      }
+      .park-content {
+        display: none;
+        padding: 16px;
+        background: white;
+        border-radius: 0 0 12px 12px;
+      }
+      .park-box.open .park-content { display: block; }
+      .attraction-table { width: 100%; margin-top: 8px; border-collapse: collapse; }
+      .attraction-table th, .attraction-table td {
+        border-bottom: 1px solid #e5e7eb;
+        padding: 6px 4px;
+        font-size: 13px;
+      }
+      .attraction-table th { background: #f8fafc; }
+    </style>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document.querySelectorAll(".park-header").forEach(h => {
+          h.addEventListener("click", () => {
+            h.parentElement.classList.toggle("open");
+          });
+        });
+      });
+    </script>
+
+    <!-- ======================== MAGIC KINGDOM ======================== -->
+    <div class="park-box">
+  <div class="park-header">Magic Kingdom (Disney)</div>
+  <div class="park-content">
+    <p>O parque mais clássico da Disney, com seis áreas temáticas e dezenas de atrações.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>TRON Lightcycle Run</td><td>48” (122 cm)</td><td>Alta</td><td>50–120 min</td></tr>
+        <tr><td>Tiana’s Bayou Adventure</td><td>40” (102 cm)</td><td>Média</td><td>40–90 min</td></tr>
+        <tr><td>Space Mountain</td><td>44” (113 cm)</td><td>Alta</td><td>45–90 min</td></tr>
+        <tr><td>Big Thunder Mountain Railroad</td><td>40” (102 cm)</td><td>Média</td><td>30–70 min</td></tr>
+        <tr><td>Seven Dwarfs Mine Train</td><td>38” (97 cm)</td><td>Média</td><td>60–120 min</td></tr>
+        <tr><td>Pirates of the Caribbean</td><td>N/A</td><td>Leve</td><td>15–40 min</td></tr>
+        <tr><td>Haunted Mansion</td><td>N/A</td><td>Leve</td><td>20–45 min</td></tr>
+        <tr><td>Peter Pan’s Flight</td><td>N/A</td><td>Leve</td><td>40–90 min</td></tr>
+        <tr><td>It’s a Small World</td><td>N/A</td><td>Leve</td><td>10–30 min</td></tr>
+        <tr><td>Dumbo the Flying Elephant</td><td>N/A</td><td>Leve</td><td>10–25 min</td></tr>
+        <tr><td>Jungle Cruise</td><td>N/A</td><td>Leve</td><td>30–60 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- ======================== EPCOT ======================== -->
+    <!-- ======================== EPCOT ======================== -->
+<div class="park-box">
+  <div class="park-header">EPCOT (Disney)</div>
+  <div class="park-content">
+    <p>Parque futurista e cultural, com atrações modernas e pavilhões de vários países.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Guardians of the Galaxy – Cosmic Rewind</td><td>42” (107 cm)</td><td>Alta</td><td>60–120 min</td></tr>
+        <tr><td>Soarin’ Around the World</td><td>40” (102 cm)</td><td>Leve/Média</td><td>30–70 min</td></tr>
+        <tr><td>Test Track</td><td>40” (102 cm)</td><td>Média</td><td>45–90 min</td></tr>
+        <tr><td>Frozen Ever After</td><td>N/A</td><td>Leve</td><td>45–90 min</td></tr>
+        <tr><td>Remy’s Ratatouille Adventure</td><td>N/A</td><td>Leve</td><td>40–90 min</td></tr>
+        <tr><td>Mission: SPACE (Green – menos intenso)</td><td>40” (102 cm)</td><td>Média</td><td>20–50 min</td></tr>
+        <tr><td>Mission: SPACE (Orange – mais intenso)</td><td>44” (112 cm)</td><td>Alta</td><td>25–60 min</td></tr>
+        <tr><td>Spaceship Earth</td><td>N/A</td><td>Leve</td><td>10–30 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- ======================== HOLLYWOOD STUDIOS ======================== -->
+    <div class="park-box">
+  <div class="park-header">Hollywood Studios (Disney)</div>
+  <div class="park-content">
+    <p>Parque cinematográfico com Star Wars, Toy Story e atrações radicais.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Star Wars: Rise of the Resistance</td><td>40” (102 cm)</td><td>Alta/Imersiva</td><td>70–180 min</td></tr>
+        <tr><td>Millennium Falcon – Smugglers Run</td><td>38” (97 cm)</td><td>Média</td><td>40–90 min</td></tr>
+        <tr><td>Mickey & Minnie’s Runaway Railway</td><td>Nenhuma</td><td>Leve</td><td>30–70 min</td></tr>
+        <tr><td>Slinky Dog Dash</td><td>38” (97 cm)</td><td>Média</td><td>50–120 min</td></tr>
+        <tr><td>The Twilight Zone Tower of Terror</td><td>40” (102 cm)</td><td>Alta</td><td>30–70 min</td></tr>
+        <tr><td>Rock ’n’ Roller Coaster</td><td>48” (122 cm)</td><td>Muito alta</td><td>30–70 min</td></tr>
+        <tr><td>Toy Story Mania!</td><td>Nenhuma</td><td>Leve</td><td>25–60 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- ======================== ANIMAL KINGDOM ======================== -->
+    <div class="park-box">
+  <div class="park-header">Animal Kingdom (Disney)</div>
+  <div class="park-content">
+    <p>Atrações com animais, Pandora – World of Avatar e montanhas-russas.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Avatar – Flight of Passage</td><td>44” (112 cm)</td><td>Alta</td><td>60–120 min</td></tr>
+        <tr><td>Na’vi River Journey</td><td>N/A</td><td>Leve</td><td>40–90 min</td></tr>
+        <tr><td>Expedition Everest</td><td>44” (113 cm)</td><td>Alta</td><td>20–60 min</td></tr>
+        <tr><td>Kilimanjaro Safaris</td><td>N/A</td><td>Leve</td><td>20–60 min</td></tr>
+        <tr><td>Kali River Rapids</td><td>38” (97 cm)</td><td>Média</td><td>20–50 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- ======================== UNIVERSAL STUDIOS ======================== -->
+    <div class="park-box">
+  <div class="park-header">Universal Studios Florida</div>
+  <div class="park-content">
+    <p>Atrações de Harry Potter, Minions, simuladores e shows de ação.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Harry Potter and the Escape from Gringotts</td><td>42” (107 cm)</td><td>Média/Alta</td><td>40–90 min</td></tr>
+        <tr><td>Revenge of the Mummy</td><td>48” (122 cm)</td><td>Alta</td><td>25–60 min</td></tr>
+        <tr><td>The Simpsons Ride</td><td>40” (102 cm)</td><td>Média</td><td>30–70 min</td></tr>
+        <tr><td>MEN IN BLACK Alien Attack</td><td>42” (107 cm)</td><td>Média</td><td>20–50 min</td></tr>
+        <tr><td>TRANSFORMERS: The Ride 3D</td><td>40” (102 cm)</td><td>Média</td><td>25–60 min</td></tr>
+        <tr><td>Fast & Furious – Supercharged</td><td>40” (102 cm)</td><td>Média</td><td>20–50 min</td></tr>
+        <tr><td>Despicable Me Minion Mayhem</td><td>40” (102 cm)</td><td>Leve/Média</td><td>30–70 min</td></tr>
+        <tr><td>The Bourne Stuntacular (show)</td><td>N/A</td><td>Leve/Média (show de ação)</td><td>Chegar 15–30 min antes</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- ======================== ISLANDS OF ADVENTURE ======================== -->
+    <div class="park-box">
+  <div class="park-header">Islands of Adventure (Universal)</div>
+  <div class="park-content">
+    <p>Montanhas-russas, Jurassic World e o mundo de Harry Potter.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Jurassic World VelociCoaster</td><td>51” (130 cm)</td><td>Muito alta</td><td>40–120 min</td></tr>
+        <tr><td>Hagrid’s Magical Creatures Motorbike Adventure</td><td>48” (122 cm)</td><td>Alta</td><td>60–180 min</td></tr>
+        <tr><td>The Incredible Hulk Coaster</td><td>54” (137 cm)</td><td>Muito alta</td><td>30–80 min</td></tr>
+        <tr><td>Harry Potter and the Forbidden Journey (castelo de Hogwarts)</td><td>48” (122 cm)</td><td>Média/Alta</td><td>30–70 min</td></tr>
+        <tr><td>Hogwarts Express (Hogsmeade ↔ USF)</td><td>Nenhuma</td><td>Leve</td><td>20–50 min</td></tr>
+        <tr><td>Skull Island: Reign of Kong</td><td>36” (91 cm)</td><td>Média</td><td>25–60 min</td></tr>
+        <tr><td>Jurassic Park River Adventure</td><td>42” (107 cm)</td><td>Média</td><td>20–60 min</td></tr>
+        <tr><td>Popeye & Bluto’s Bilge-Rat Barges</td><td>42” (107 cm)</td><td>Média (muito molhado)</td><td>20–50 min</td></tr>
+        <tr><td>Dudley Do-Right’s Ripsaw Falls</td><td>44” (112 cm)</td><td>Média/Alta (queda grande)</td><td>20–60 min</td></tr>
+        <tr><td>The Amazing Adventures of Spider-Man</td><td>40” (102 cm)</td><td>Média</td><td>20–60 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- ======================== EPIC UNIVERSE ======================== -->
+    <!-- ======================== EPIC UNIVERSE ======================== -->
+<div class="park-box">
+  <div class="park-header">Epic Universe (Universal)</div>
+  <div class="park-content">
+    <p>Novo parque da Universal, com mundos de Nintendo, Dragões, Monstros e Harry Potter.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média (estimada)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mario Kart: Bowser’s Challenge</td><td>40” (102 cm)</td><td>Média</td><td>60–120 min</td></tr>
+        <tr><td>Yoshi’s Adventure</td><td>N/A</td><td>Leve</td><td>20–60 min</td></tr>
+        <tr><td>Mine-Cart Madness (Donkey Kong)</td><td>40” (102 cm)</td><td>Média</td><td>50–120 min</td></tr>
+        <tr><td>Harry Potter and the Battle at the Ministry</td><td>40” (102 cm)</td><td>Média/Alta</td><td>60–120 min</td></tr>
+        <tr><td>Stardust Racers (montanha-russa de Celestial Park)</td><td>48” (122 cm)</td><td>Muito alta</td><td>60–150 min</td></tr>
+        <tr><td>How to Train Your Dragon – Coaster</td><td>44” (112 cm)</td><td>Média/Alta</td><td>40–90 min</td></tr>
+        <tr><td>Monsters Unchained (Dark Universe)</td><td>48” (122 cm)</td><td>Média/Alta</td><td>60–120 min</td></tr>
+      </tbody>
+    </table>
+
+    <p class="muted">
+      As filas e até mesmo os nomes podem sofrer ajustes, já que o parque ainda é novo e em constante otimização.
+    </p>
+  </div>
+</div>
+
+    <!-- ======================== SEAWORLD ======================== -->
+    <!-- ======================== SEAWORLD ======================== -->
+<div class="park-box">
+  <div class="park-header">SeaWorld Orlando</div>
+  <div class="park-content">
+    <p>Montanhas-russas radicais, atrações aquáticas e shows com animais marinhos.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Atração / Show</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila / Horário médio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Mako</td><td>54” (137 cm)</td><td>Muito alta</td><td>15–40 min</td></tr>
+        <tr><td>Kraken</td><td>54” (137 cm)</td><td>Muito alta</td><td>15–40 min</td></tr>
+        <tr><td>Manta</td><td>54” (137 cm)</td><td>Muito alta</td><td>20–45 min</td></tr>
+        <tr><td>Ice Breaker</td><td>48” (122 cm)</td><td>Alta</td><td>20–40 min</td></tr>
+        <tr><td>Pipeline: The Surf Coaster</td><td>54” (137 cm)</td><td>Muito alta</td><td>20–50 min</td></tr>
+        <tr><td>Infinity Falls</td><td>42” (107 cm)</td><td>Média (molhado)</td><td>20–60 min</td></tr>
+        <tr><td>Journey to Atlantis</td><td>42” (107 cm)</td><td>Média</td><td>20–50 min</td></tr>
+        <tr><td>Orca Encounter (show de orcas)</td><td>N/A</td><td>Leve</td><td>Chegar 20–30 min antes</td></tr>
+        <tr><td>Dolphin Adventures (show de golfinhos)</td><td>N/A</td><td>Leve</td><td>Chegar 20–30 min antes</td></tr>
+        <tr><td>Sea Lion Experience / Sea Lion High</td><td>N/A</td><td>Leve/Comédia</td><td>Chegar 15–20 min antes</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+    <!-- ======================== BUSCH GARDENS ======================== -->
+    <!-- ======================== BUSCH GARDENS ======================== -->
+<div class="park-box">
+  <div class="park-header">Busch Gardens Tampa</div>
+  <div class="park-content">
+    <p>Parque com as montanhas-russas mais intensas da Flórida, além de muitos animais.</p>
+
+    <table class="attraction-table">
+      <thead>
+        <tr>
+          <th>Montanha-russa / Atração</th>
+          <th>Altura mínima</th>
+          <th>Adrenalina</th>
+          <th>Fila média</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Iron Gwazi</td><td>48” (122 cm)</td><td>Muito alta</td><td>20–50 min</td></tr>
+        <tr><td>SheiKra</td><td>54” (137 cm)</td><td>Muito alta</td><td>20–50 min</td></tr>
+        <tr><td>Montu</td><td>54” (137 cm)</td><td>Muito alta</td><td>20–45 min</td></tr>
+        <tr><td>Kumba</td><td>54” (137 cm)</td><td>Alta</td><td>10–30 min</td></tr>
+        <tr><td>Cheetah Hunt</td><td>48” (122 cm)</td><td>Alta</td><td>20–60 min</td></tr>
+        <tr><td>Tigris</td><td>54” (137 cm)</td><td>Alta</td><td>20–45 min</td></tr>
+        <tr><td>Cobra’s Curse</td><td>48” (122 cm) (42” com acompanhante)</td><td>Média</td><td>20–50 min</td></tr>
+        <tr><td>Scorpion</td><td>42” (107 cm)</td><td>Média</td><td>10–30 min</td></tr>
+        <tr><td>Serengeti Flyer</td><td>48” (122 cm)</td><td>Alta</td><td>15–40 min</td></tr>
+        <tr><td>Falcon’s Fury (elevador)</td><td>48” (122 cm)</td><td>Muito alta</td><td>15–40 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+  </div>
+</section>
+
+
+    <!-- ROTEIROS -->
+    <section class="section" id="roteiros">
+  <div class="section-card">
+    <h2>Roteiros sugeridos</h2>
+    <p class="muted">
+      Alguns exemplos de roteiros para Orlando já incluindo o novo parque <strong>Epic Universe</strong>,
+      além de opções de praias, dias sem parque e experiências gastronômicas.
+    </p>
+
+    <!-- ROTEIROS PRINCIPAIS COM PARQUES (INCLUINDO EPIC UNIVERSE) -->
+    <h3 class="subsection-title">Roteiros com parques</h3>
+    <div class="cards">
+      <!-- 5 DIAS -->
+      <div class="card">
+        <h3>5 dias em Orlando (com Epic Universe)</h3>
+        <ul>
+          <li><strong>Dia 1:</strong> Chegada, mercado/Walmart, ajuste de chip e descanso.</li>
+          <li><strong>Dia 2:</strong> Magic Kingdom (dia inteiro).</li>
+          <li><strong>Dia 3:</strong> Epic Universe (UniversaI) – foco total no novo parque.</li>
+          <li><strong>Dia 4:</strong> Universal Studios <em>ou</em> Islands of Adventure.</li>
+          <li><strong>Dia 5:</strong> Compras em outlet + retorno.</li>
+        </ul>
+      </div>
+
+      <!-- 7 DIAS -->
+      <div class="card">
+        <h3>7 dias em Orlando (Disney + Universal + Epic)</h3>
+        <ul>
+          <li><strong>Dia 1:</strong> Chegada, compras básicas e reconhecimento da região.</li>
+          <li><strong>Dia 2:</strong> Magic Kingdom.</li>
+          <li><strong>Dia 3:</strong> Hollywood Studios <em>ou</em> Animal Kingdom.</li>
+          <li><strong>Dia 4:</strong> Epic Universe.</li>
+          <li><strong>Dia 5:</strong> Universal Studios.</li>
+          <li><strong>Dia 6:</strong> Islands of Adventure.</li>
+          <li><strong>Dia 7:</strong> Outlet (Vineland ou International) + Disney Springs à noite.</li>
+        </ul>
+      </div>
+
+      <!-- 10–14 DIAS -->
+      <div class="card">
+        <h3>10–14 dias (roteiro completo)</h3>
+        <p>Exemplo de distribuição:</p>
+        <ul>
+          <li><strong>Dias 1–2:</strong> Chegada, mercado, compras leves, ajuste de fuso e descanso.</li>
+          <li><strong>Dias 3–6:</strong> 4 parques Disney (MK, EPCOT, HS, AK).</li>
+          <li><strong>Dia 7:</strong> Epic Universe.</li>
+          <li><strong>Dias 8–9:</strong> Universal Studios + Islands of Adventure.</li>
+          <li><strong>Dia 10:</strong> SeaWorld <em>ou</em> Busch Gardens.</li>
+          <li><strong>Dias 11–12:</strong> Compras (outlets + Florida Mall/Millenia).</li>
+          <li><strong>Dias 13–14:</strong> Dias livres para repetir parque favorito ou fazer bate-volta de praia.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ROTEIROS DE PRAIA -->
+    <h3 class="subsection-title" style="margin-top:24px;">Roteiros de praias (bate-volta da região de Orlando)</h3>
+    <div class="cards">
+      <div class="card">
+        <h3>2 dias – Costa Leste (Cocoa Beach)</h3>
+        <ul>
+          <li><strong>Dia 1:</strong> Saída cedo de Orlando → Cocoa Beach, praia + píer, almoço na orla, pôr do sol.</li>
+          <li><strong>Dia 2:</strong> Manhã de praia, visita a lojas de surf, retorno a Orlando no fim da tarde.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>2 dias – Costa Oeste (Clearwater / St. Pete)</h3>
+        <ul>
+          <li><strong>Dia 1:</strong> Saída cedo → Clearwater Beach, praia + passeio de barco/observação de golfinhos.</li>
+          <li><strong>Dia 2:</strong> St. Pete Beach e região, cafés e restaurantes na orla, volta à noite.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>1 dia – Praia rápido</h3>
+        <ul>
+          <li><strong>Dia único:</strong> Escolher Cocoa Beach <em>ou</em> Clearwater, sair bem cedo, aproveitar praia até meio/final da tarde e retornar.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ROTEIROS FORA DE PARQUE -->
+    <h3 class="subsection-title" style="margin-top:24px;">Roteiros fora de parque (descanso e experiências diferentes)</h3>
+    <div class="cards">
+      <div class="card">
+        <h3>1 dia – Dia leve em Orlando</h3>
+        <ul>
+          <li>Manhã: café da manhã mais demorado, passeio em Winter Park (parque, lojinhas, passeio de barco opcional).</li>
+          <li>Tarde: Orlando Icon Park (roda-gigante, museu de cera, minigolfe).</li>
+          <li>Noite: Jantar na International Drive ou em Disney Springs.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>1 dia – Compras + entretenimento</h3>
+        <ul>
+          <li>Manhã: Outlet (Vineland ou International Premium).</li>
+          <li>Tarde: Florida Mall (eletrônicos, roupas, brinquedos).</li>
+          <li>Noite: The Loop, Old Town Kissimmee ou Icon Park para passeio e jantar.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>2 dias – “Orlando sem parques”</h3>
+        <ul>
+          <li><strong>Dia 1:</strong> Winter Park + passeio de barco + bairro de Mills/Thornton Park à noite.</li>
+          <li><strong>Dia 2:</strong> Compras + atrações como minigolfe, kart, escape room, etc.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ROTEIROS GASTRONÔMICOS -->
+    <h3 class="subsection-title" style="margin-top:24px;">Roteiros gastronômicos</h3>
+    <div class="cards">
+      <div class="card">
+        <h3>Noite gastronômica em Disney Springs</h3>
+        <ul>
+          <li>Final de tarde: chegada em Disney Springs, passeio pelas lojas.</li>
+          <li>Jantar em restaurante temático (por exemplo, opção de churrasco, hambúrguer gourmet ou culinária internacional).</li>
+          <li>Sobremesa em sorveteria ou confeitaria da área, caminhada à beira do lago.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Noite gastronômica na International Drive</h3>
+        <ul>
+          <li>Início da noite: passeio pelo Icon Park.</li>
+          <li>Jantar em steakhouse, rodízio brasileiro ou restaurante temático.</li>
+          <li>Pós-jantar: bar com música ao vivo ou café com doces típicos americanos.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Dia inteiro “foodie”</h3>
+        <ul>
+          <li>Manhã: café da manhã em cafeteria diferente (Winter Park, Dr. Phillips ou Downtown).</li>
+          <li>Almoço: food court de shopping ou mercado gastronômico (food hall).</li>
+          <li>Jantar: restaurante escolhido com antecedência (reserva), seguido de sobremesa em outro lugar famoso.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="alimentacao">
+  <div class="section-card">
+    <h2>Quanto custa comer por dia em Orlando?</h2>
+    <p>
+      Os gastos com alimentação variam muito conforme o estilo de cada viajante. Abaixo, uma média realista por pessoa/dia.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de viajante</th>
+          <th>Média por dia (US$)</th>
+          <th>Descrição</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Econômico</strong></td>
+          <td>US$ 25–40</td>
+          <td>Fast food, lanches, refeições simples, mercados (Walmart/Target), água e snacks.</td>
+        </tr>
+        <tr>
+          <td><strong>Moderado</strong></td>
+          <td>US$ 45–70</td>
+          <td>Café simples + almoço rápido + jantar normal (I-Drive, Disney Springs, redes americanas).</td>
+        </tr>
+        <tr>
+          <td><strong>Conforto</strong></td>
+          <td>US$ 75–120</td>
+          <td>Restaurantes temáticos, refeições completas, cafés especiais, sobremesas.</td>
+        </tr>
+        <tr>
+          <td><strong>Gourmet</strong></td>
+          <td>US$ 150–300+</td>
+          <td>Restaurantes Signature Disney/Universal, steakhouses premium, gastronomia de alto nível.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="subsection-title" style="margin-top:24px;">Exemplos reais de quanto custa comer:</h3>
+    <ul>
+      <li><strong>Café da manhã em cafeteria:</strong> US$ 8–15</li>
+      <li><strong>Fast-food (McDonald's, Chick-fil-A, Wendy’s):</strong> US$ 9–14</li>
+      <li><strong>Almoço em rede (Olive Garden, Chili’s, Applebee’s):</strong> US$ 14–20</li>
+      <li><strong>Jantar em restaurante temático:</strong> US$ 20–35</li>
+      <li><strong>Refri/água nos parques:</strong> US$ 4–6</li>
+      <li><strong>Combo nos parques (Disney/Universal):</strong> US$ 12–17</li>
+      <li><strong>Steakhouse boa:</strong> US$ 35–60 por pessoa</li>
+    </ul>
+
+    <p class="muted">
+      Dica: Para economizar, mercados como Walmart, Publix e Target oferecem refeições prontas baratas.  
+      Em casas de temporada, cozinhar parte das refeições reduz o gasto pela metade.
+    </p>
+  </div>
+</section>
+
+    <!-- INGRESSOS & JANELAS -->
+    <section class="section" id="ingressos">
+      <div class="section-card">
+        <h2>Ingressos e janelas de utilização</h2>
+        <p>
+          Abaixo, um resumo das principais <strong>janelas de utilização</strong> dos ingressos da Disney e
+          Universal em Orlando. Sempre confirme a regra atual no momento da compra, pois condições podem mudar.
+        </p>
+
+        <h3 class="subsection-title">Disney – ingressos padrão (1 a 10 dias)</h3>
+        <p class="muted">
+          Ingressos “date-based” padrão (Base, Park Hopper, Hopper Plus). A quantidade de <strong>dias de uso</strong>
+          deve caber dentro de uma janela de datas a partir da data inicial selecionada.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Dias de parque</th>
+              <th>Janela de utilização</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 dia</td>
+              <td>Somente no dia selecionado</td>
+              <td>Selecionou 10/07 → só pode usar em 10/07.</td>
+            </tr>
+            <tr>
+              <td>2 dias</td>
+              <td>2 dias de uso dentro de 4 dias</td>
+              <td>Data inicial 10/07 → pode usar de 10/07 a 13/07 (2 dias quaisquer).</td>
+            </tr>
+            <tr>
+              <td>3 dias</td>
+              <td>3 dias de uso dentro de 5 dias</td>
+              <td>Início 10/07 → usar até 14/07.</td>
+            </tr>
+            <tr>
+              <td>4 dias</td>
+              <td>4 dias de uso dentro de 7 dias</td>
+              <td>Início 10/07 → usar até 16/07.</td>
+            </tr>
+            <tr>
+              <td>5 dias</td>
+              <td>5 dias de uso dentro de 8 dias</td>
+              <td>Início 10/07 → usar até 17/07.</td>
+            </tr>
+            <tr>
+              <td>6 dias</td>
+              <td>6 dias de uso dentro de 9 dias</td>
+              <td>Início 10/07 → usar até 18/07.</td>
+            </tr>
+            <tr>
+              <td>7 dias</td>
+              <td>7 dias de uso dentro de 10 dias</td>
+              <td>Início 10/07 → usar até 19/07.</td>
+            </tr>
+            <tr>
+              <td>8 dias</td>
+              <td>8 dias de uso dentro de 12 dias</td>
+              <td>Início 10/07 → usar até 21/07.</td>
+            </tr>
+            <tr>
+              <td>9 dias</td>
+              <td>9 dias de uso dentro de 13 dias</td>
+              <td>Início 10/07 → usar até 22/07.</td>
+            </tr>
+            <tr>
+              <td>10 dias</td>
+              <td>10 dias de uso dentro de 14 dias</td>
+              <td>Início 10/07 → usar até 23/07.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="subsection-title">Disney – ingressos especiais / promoções</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de ingresso</th>
+              <th>Regra geral de janela</th>
+              <th>Observações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>4-Park Magic Ticket</td>
+              <td>4 dias de uso dentro de 7 dias</td>
+              <td>1 parque diferente por dia, cada parque 1 vez. Válido por promoções em períodos específicos.</td>
+            </tr>
+            <tr>
+              <td>Outras ofertas (ex.: 3-Day/3-Park promocionais)</td>
+              <td>Normalmente janela de 5 a 7 dias</td>
+              <td>Regras variam conforme a campanha; sempre ler o “termos e condições” do ingresso.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="subsection-title">Universal Orlando – ingressos padrão (2 a 5 dias)</h3>
+        <p class="muted">
+          Tickets 2-Park ou 3-Park, Base ou Park-to-Park. A regra mais comum é uma janela de alguns dias consecutivos
+          a partir da data de início / primeiro uso.
+        </p>
+        <table>
+          <thead>
+            <tr>
+              <th>Dias de parque</th>
+              <th>Janela de utilização típica</th>
+              <th>Exemplo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1 dia</td>
+              <td>Somente na data selecionada</td>
+              <td>Ex.: 10/07 → só pode usar em 10/07.</td>
+            </tr>
+            <tr>
+              <td>2 dias</td>
+              <td>2 dias de uso dentro de 5 dias consecutivos</td>
+              <td>Início 10/07 → usar até 14/07.</td>
+            </tr>
+            <tr>
+              <td>3 dias</td>
+              <td>3 dias de uso dentro de 6 dias consecutivos</td>
+              <td>Início 10/07 → usar até 15/07.</td>
+            </tr>
+            <tr>
+              <td>4 dias</td>
+              <td>4 dias de uso dentro de 7 dias consecutivos</td>
+              <td>Início 10/07 → usar até 16/07.</td>
+            </tr>
+            <tr>
+              <td>5 dias</td>
+              <td>5 dias de uso dentro de 8 dias consecutivos</td>
+              <td>Início 10/07 → usar até 17/07.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="subsection-title">Universal – ingressos especiais</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>Tipo de ingresso</th>
+              <th>Janela de utilização</th>
+              <th>Observações</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>All Parks Ticket (14 dias)</td>
+              <td>Uso ilimitado dentro de 14 dias a partir da data inicial</td>
+              <td>Geralmente permite park-to-park entre todos os parques Universal durante a janela.</td>
+            </tr>
+            <tr>
+              <td>Combos com Epic/Volcano Bay (ex.: 2-Park 2-Day + dias extras)</td>
+              <td>Normalmente 6 a 7 dias de janela</td>
+              <td>A quantidade de dias de parque precisa caber dentro da janela indicada no voucher.</td>
+            </tr>
+            <tr>
+              <td>Express Pass multi-day</td>
+              <td>Ex.: 3 dias de uso dentro de 6 dias de janela</td>
+              <td>É um complemento ao ingresso; exige sempre ingresso válido para o mesmo período.</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p class="muted">
+          <strong>Resumo:</strong> Disney trabalha com uma tabela fixa de janelas por quantidade de dias.
+          A Universal costuma usar janelas de 5 a 8 dias para ingressos de 2 a 5 dias. Promoções específicas
+          sempre podem ter regras próprias.
+        </p>
+      </div>
+    </section>
+
+<section class="section" id="vincular-ingressos-disney">
+  <div class="section-card">
+    <h2>Como vincular seus ingressos Disney no app My Disney Experience</h2>
+
+    <p>
+      Antes de agendar Lightning Lane, fazer reservas e organizar seu dia, é essencial 
+      <strong>vincular os ingressos ao seu perfil Disney</strong> no app My Disney Experience.
+      O processo é simples e pode ser feito pelo celular ou pelo site.
+    </p>
+
+    <h3 class="subsection-title">1. Antes de começar</h3>
+    <ul>
+      <li>Tenha em mãos o <strong>número de confirmação</strong> da sua reserva ou o código do ingresso (geralmente um código alfanumérico).</li>
+      <li>Crie uma <strong>conta Disney</strong> (gratuita) se ainda não tiver.</li>
+      <li>Garanta que todas as pessoas do grupo estejam na lista de <strong>“Family & Friends”</strong> do seu perfil.</li>
+    </ul>
+
+    <h3 class="subsection-title">2. Passo a passo pelo aplicativo (My Disney Experience)</h3>
+    <ol>
+      <li>Baixe o app <strong>My Disney Experience</strong> (iOS ou Android) e faça login com sua conta Disney.</li>
+      <li>No menu principal, toque no ícone de <strong>“Tickets and Passes”</strong> ou <strong>“Meus Ingressos”</strong>.</li>
+      <li>No canto superior direito, toque no botão com o símbolo de <strong>“+”</strong> (adicionar).</li>
+      <li>Selecione a opção <strong>“Link Tickets &amp; Passes”</strong> (Vincular ingressos e passes).</li>
+      <li>Você terá duas opções:
+        <ul>
+          <li><strong>Scanner da câmera:</strong> aponte a câmera para o QR code ou código de barras do ingresso.</li>
+          <li><strong>Inserir manualmente:</strong> digite o código de confirmação ou ID do ingresso.</li>
+        </ul>
+      </li>
+      <li>Confirme para qual pessoa da sua lista o ingresso será vinculado.</li>
+      <li>Repita o processo para todos os ingressos do seu grupo.</li>
+    </ol>
+
+    <h3 class="subsection-title">3. Passo a passo pelo site (computador)</h3>
+    <ol>
+      <li>Acesse o site oficial: <strong>Disneyworld.com</strong> e faça login na sua conta.</li>
+      <li>No menu superior, passe o mouse em <strong>“My Disney Experience”</strong> e clique em <strong>“My Plans”</strong> (Meus Planos).</li>
+      <li>Procure a área <strong>“Link Reservations and Purchases”</strong> (Vincular reservas e compras).</li>
+      <li>Clique em <strong>“Tickets”</strong> (Ingressos).</li>
+      <li>Digite o código do ingresso ou confirmação do pacote e siga as instruções da tela.</li>
+      <li>Atribua cada ingresso à pessoa correta da sua lista de <strong>Family &amp; Friends</strong>.</li>
+    </ol>
+
+    <h3 class="subsection-title">4. Vinculando ingressos de outras pessoas do grupo</h3>
+    <ul>
+      <li>Certifique-se de que todos estejam na sua lista de <strong>Family &amp; Friends</strong>.</l
+</section>
+
+<section class="section" id="lightning-lane">
+  <div class="section-card">
+    <h2>Lightning Lane: Single Pass, Multi Pass e Premier</h2>
+    <p>
+      A Disney oferece três tipos de Lightning Lane para você fugir das filas: 
+      <strong>Multi Pass</strong>, <strong>Single Pass</strong> e <strong>Premier Pass</strong>.
+      Abaixo está um guia completo em português, com foco em Orlando.
+    </p>
+
+    <!-- 1. VISÃO GERAL -->
+    <h3 class="subsection-title">1. Visão geral dos tipos de Lightning Lane</h3>
+    <ul>
+      <li>
+        <strong>Lightning Lane Multi Pass</strong><br>
+        Funciona como um pacote de Lightning Lanes. Você escolhe até
+        <strong>3 atrações por dia em um parque</strong> com janela de horário marcada. 
+        Depois de usar a primeira, pode ir marcando mais uma de cada vez, conforme a disponibilidade.
+      </li>
+      <li>
+        <strong>Lightning Lane Single Pass</strong><br>
+        É pago por atração e serve apenas para as <strong>atrações mais concorridas</strong> 
+        (como TRON, Seven Dwarfs, Guardians, Rise of the Resistance e Flight of Passage). 
+        Você pode comprar até <strong>2 por dia</strong>.
+      </li>
+      <li>
+        <strong>Lightning Lane Premier Pass</strong><br>
+        É o “tudo incluído” da Disney: dá direito a entrar uma vez em <strong>todas</strong> as 
+        Lightning Lanes de um parque, no mesmo dia, sem precisar marcar horários.
+      </li>
+    </ul>
+
+    <!-- 2. QUANDO POSSO COMPRAR -->
+    <h3 class="subsection-title">2. Quando posso comprar? (janelas de antecipação)</h3>
+    <p>Em termos práticos, funciona assim:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Tipo de hóspede</th>
+          <th>Quando pode comprar LL Multi / Single</th>
+          <th>Quando pode comprar LL Premier</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Hóspede de hotel Disney</strong></td>
+          <td>
+            Até <strong>7 dias antes do check-in</strong>, podendo já configurar 
+            os dias de parque de toda a estadia (máx. 14 dias consecutivos).
+          </td>
+          <td>
+            Em geral, também até <strong>7 dias antes</strong> da chegada, para cada dia de parque
+            em que você quiser usar o Premier (sujeito à disponibilidade).
+          </td>
+        </tr>
+        <tr>
+          <td><strong>Não hóspede Disney</strong></td>
+          <td>
+            Aproximadamente <strong>3 dias antes</strong> do primeiro dia de parque 
+            (ou do início do ingresso com data marcada).
+          </td>
+          <td>
+            Normalmente dentro de uma janela similar de poucos dias antes do uso, 
+            mas sempre sujeito à disponibilidade no app e à capacidade diária.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="muted">
+      <strong>Importante:</strong> as regras podem mudar. Sempre confira no app My Disney Experience
+      perto da sua viagem para se certificar das janelas de compra vigentes.
+    </p>
+
+    <!-- 3. COMO COMPRAR PELO APP -->
+    <h3 class="subsection-title">3. Como comprar Lightning Lane pelo app (passo a passo)</h3>
+
+    <h4>3.1. Passo a passo – Multi Pass</h4>
+    <ol>
+      <li>Abra o app <strong>My Disney Experience</strong> e faça login.</li>
+      <li>Certifique-se de que os <strong>ingressos e o parque do dia</strong> já estão vinculados.</li>
+      <li>Na tela inicial, procure um botão ou card com o texto <strong>“Lightning Lane passes”</strong> ou similar.</li>
+      <li>Selecione <strong>Lightning Lane Multi Pass</strong>.</li>
+      <li>Escolha:
+        <ul>
+          <li><strong>O dia de visita</strong> ao parque.</li>
+          <li><strong>O parque</strong> (Magic Kingdom, EPCOT, Hollywood Studios ou Animal Kingdom).</li>
+          <li><strong>Quem vai usar</strong> (selecione as pessoas da sua lista Family &amp; Friends).</li>
+        </ul>
+      </li>
+      <li>
+        O sistema vai mostrar as atrações disponíveis em dois grupos:
+        <strong>Sessão 1 (Tier 1)</strong> e <strong>Sessão 2 (Tier 2)</strong> (exceto no Animal Kingdom, 
+        onde todas ficam em um grupo único).
+      </li>
+      <li>
+        Escolha até <strong>3 atrações</strong> para aquele dia:
+        <ul>
+          <li>Em MK, EPCOT e HS: normalmente <strong>1 da Sessão 1</strong> e <strong>2 da Sessão 2</strong>, 
+          ou as 3 da Sessão 2.</li>
+          <li>No Animal Kingdom: 3 atrações entre as disponíveis.</li>
+        </ul>
+      </li>
+      <li>Selecione os <strong>horários de retorno</strong> (arrival windows) de cada uma.</li>
+      <li>Confirme o pagamento e finalize.</li>
+    </ol>
+
+    <h4>3.2. Passo a passo – Single Pass</h4>
+    <ol>
+      <li>No mesmo menu de <strong>Lightning Lane passes</strong>, selecione <strong>Single Pass</strong>.</li>
+      <li>Escolha o parque e o dia.</li>
+      <li>
+        Selecione a atração desejada entre as disponíveis, que em Orlando hoje são:
+        <ul>
+          <li>Magic Kingdom: Seven Dwarfs Mine Train, TRON Lightcycle / Run</li>
+          <li>EPCOT: Guardians of the Galaxy – Cosmic Rewind</li>
+          <li>Hollywood Studios: Star Wars – Rise of the Resistance</li>
+          <li>Animal Kingdom: Avatar – Flight of Passage</li>
+        </ul>
+      </li>
+      <li>Escolha o <strong>horário de retorno</strong> e confirme.</li>
+      <li>Lembre que é possível adquirir até <strong>2 Single Pass por dia</strong>, para atrações diferentes.</li>
+    </ol>
+
+    <h4>3.3. Passo a passo – Premier Pass</h4>
+    <ol>
+      <li>Abra o app e vá em <strong>Lightning Lane Premier Pass</strong> (quando disponível).</li>
+      <li>Escolha:
+        <ul>
+          <li><strong>O parque</strong> em que quer usar o Premier (apenas 1 parque por Premier Pass).</li>
+          <li><strong>A data</strong> da visita.</li>
+          <li><strong>Quem do grupo</strong> vai usar o Premier naquele dia.</li>
+        </ul>
+      </li>
+      <li>
+        O app mostrará o valor por pessoa para aquele parque e dia. Os valores são bem elevados,
+        então é um produto mais “premium”.
+      </li>
+      <li>Confirme o pagamento. No dia da visita, basta ir direto às filas Lightning Lane das atrações elegíveis.</li>
+    </ol>
+
+    <!-- 4. COMO USAR E REGRAS PRÁTICAS -->
+    <h3 class="subsection-title">4. Como usar as reservas de Lightning Lane (regras práticas)</h3>
+    <ul>
+      <li><strong>Horário de retorno:</strong> você tem uma janela (ex.: 10h00–11h00). Entre nesse intervalo.</li>
+      <li><strong>Tolerância:</strong> normalmente há uma tolerância de alguns minutos antes/depois, mas não conte com isso como regra.</li>
+      <li><strong>Uma vez por atração:</strong> Multi Pass e Premier oferecem acesso <strong>uma vez por atração</strong>, não acesso ilimitado.</li>
+      <li><strong>Após usar a primeira do dia no Multi Pass:</strong> você abre a possibilidade de marcar mais atrações, uma de cada vez.</li>
+      <li><strong>Alterações:</strong> é possível alterar horários ou atrações, mas tudo depende da disponibilidade no momento da troca.</li>
+      <li><strong>Pode esgotar:</strong> tanto Multi Pass quanto Single Pass e Premier podem esgotar em dias muito cheios.</li>
+    </ul>
+
+    <!-- 5. GRUPOS (SESSÃO 1 E 2) POR PARQUE -->
+    <h3 class="subsection-title">5. Sessão 1 (Tier 1) x Sessão 2 (Tier 2) – por parque</h3>
+    <p>
+      A divisão abaixo é baseada na organização atual da Disney. Pode mudar, mas ajuda a entender a lógica
+      na hora de montar o seu Multi Pass.
+    </p>
+
+    <h4>5.1. Magic Kingdom</h4>
+    <div class="flex-grid">
+      <div>
+        <strong>Sessão 1 (Tier 1) – escolha até 1:</strong>
+        <ul>
+          <li>Jungle Cruise</li>
+          <li>Peter Pan’s Flight</li>
+          <li>Space Mountain</li>
+          <li>Tiana’s Bayou Adventure</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Sessão 2 (Tier 2):</strong>
+        <ul>
+          <li>The Barnstormer</li>
+          <li>Dumbo the Flying Elephant</li>
+          <li>Haunted Mansion</li>
+          <li>“it’s a small world”</li>
+          <li>Mad Tea Party</li>
+          <li>The Magic Carpets of Aladdin</li>
+          <li>The Many Adventures of Winnie the Pooh</li>
+          <li>Mickey’s PhilharMagic</li>
+          <li>Monsters Inc. Laugh Floor</li>
+          <li>Pirates of the Caribbean</li>
+          <li>Tomorrowland Speedway</li>
+          <li>Under the Sea – Journey of The Little Mermaid</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="muted">
+      <strong>Single Pass (MK):</strong> Seven Dwarfs Mine Train e TRON Lightcycle / Run.
+    </p>
+
+    <h4>5.2. EPCOT</h4>
+    <div class="flex-grid">
+      <div>
+        <strong>Sessão 1 (Tier 1) – escolha até 1:</strong>
+        <ul>
+          <li>Frozen Ever After</li>
+          <li>Remy’s Ratatouille Adventure</li>
+          <li>Test Track</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Sessão 2 (Tier 2):</strong>
+        <ul>
+          <li>Disney &amp; Pixar Short Film Festival</li>
+          <li>Journey into Imagination with Figment</li>
+          <li>Living with the Land</li>
+          <li>Mission: SPACE</li>
+          <li>The Seas with Nemo &amp; Friends</li>
+          <li>Soarin’ Around the World</li>
+          <li>Spaceship Earth</li>
+          <li>Turtle Talk with Crush</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="muted">
+      <strong>Single Pass (EPCOT):</strong> Guardians of the Galaxy – Cosmic Rewind.
+    </p>
+
+    <h4>5.3. Hollywood Studios</h4>
+    <div class="flex-grid">
+      <div>
+        <strong>Sessão 1 (Tier 1) – escolha até 1:</strong>
+        <ul>
+          <li>Mickey &amp; Minnie’s Runaway Railway</li>
+          <li>Millennium Falcon: Smugglers Run</li>
+          <li>Slinky Dog Dash</li>
+          <li>Rock ’n’ Roller Coaster Starring Aerosmith (quando em operação)</li>
+        </ul>
+      </div>
+      <div>
+        <strong>Sessão 2 (Tier 2):</strong>
+        <ul>
+          <li>Alien Swirling Saucers</li>
+          <li>Beauty and the Beast – Live on Stage</li>
+          <li>Frozen Sing-Along Celebration</li>
+          <li>Indiana Jones Epic Stunt Spectacular</li>
+          <li>Journey of the Little Mermaid – Musical</li>
+          <li>Star Tours – The Adventures Continue</li>
+          <li>The Twilight Zone Tower of Terror</li>
+          <li>Toy Story Mania!</li>
+        </ul>
+      </div>
+    </div>
+
+    <p class="muted">
+      <strong>Single Pass (HS):</strong> Star Wars – Rise of the Resistance.
+    </p>
+
+    <h4>5.4. Animal Kingdom</h4>
+    <p>
+      No Animal Kingdom não há divisão em Sessão 1 e Sessão 2. Todas as atrações Multi Pass ficam em um grupo único.
+      Exemplos:
+    </p>
+    <ul>
+      <li>Expedition Everest</li>
+      <li>Kilimanjaro Safaris</li>
+      <li>Na’vi River Journey</li>
+      <li>Kali River Rapids</li>
+      <li>Shows como Festival of the Lion King, Finding Nemo, Feathered Friends in Flight</li>
+      <li>(E outras atrações que o app listar na época da sua viagem.)</li>
+    </ul>
+    <p class="muted">
+      <strong>Single Pass (AK):</strong> Avatar – Flight of Passage.
+    </p>
+
+    <!-- 6. DICAS E O QUE NÃO VALE A PENA MARCAR -->
+    <h3 class="subsection-title">6. Dicas valiosas e atrações que quase nunca valem Lightning Lane</h3>
+
+    <h4>6.1. Em quais atrações vale MUITO a pena usar LL?</h4>
+    <ul>
+      <li><strong>Single Pass:</strong> quase sempre vale a pena em:
+        <ul>
+          <li>Star Wars – Rise of the Resistance</li>
+          <li>Guardians of the Galaxy – Cosmic Rewind</li>
+          <li>Avatar – Flight of Passage</li>
+          <li>TRON Lightcycle / Run</li>
+          <li>Seven Dwarfs Mine Train (principalmente com crianças)</li>
+        </ul>
+      </li>
+      <li><strong>Multi Pass – prioridades fortes em dias cheios:</strong>
+        <ul>
+          <li>Magic Kingdom: Tiana’s Bayou Adventure, Peter Pan’s Flight, Jungle Cruise, Space Mountain.</li>
+          <li>EPCOT: Frozen Ever After, Remy’s Ratatouille Adventure, Test Track.</li>
+          <li>Hollywood Studios: Slinky Dog Dash, Mickey &amp; Minnie’s Runaway Railway, Millennium Falcon, Tower of Terror.</li>
+          <li>Animal Kingdom: Na’vi River Journey, Expedition Everest, Kilimanjaro Safaris (especialmente de manhã).</li>
+        </ul>
+      </li>
+    </ul>
+
+    <h4>6.2. Atrações que normalmente NÃO valem Lightning Lane</h4>
+    <p>
+      Claro que tudo depende da lotação do dia, mas em <strong>muitos roteiros</strong> e análises de fila,
+      Lightning Lane para os exemplos abaixo quase nunca traz um ganho de tempo significativo:
+    </p>
+
+    <ul>
+      <li><strong>Shows de teatro em geral</strong> (rodízio rápido, muito assento disponível):
+        <ul>
+          <li>Mickey’s PhilharMagic (MK)</li>
+          <li>Monsters Inc. Laugh Floor (MK)</li>
+          <li>Frozen Sing-Along (HS)</li>
+          <li>Beauty and the Beast – Live on Stage (HS)</li>
+          <li>Indiana Jones Epic Stunt Spectacular (HS)</li>
+          <li>Festival of the Lion King (AK)</li>
+          <li>Finding Nemo – The Big Blue (AK)</li>
+        </ul>
+      </li>
+      <li><strong>Atrações com fila curta na maior parte do dia</strong> (especialmente em baixa temporada ou à noite):
+        <ul>
+          <li>Mad Tea Party (MK)</li>
+          <li>Carrossel, Tiki Room, Swiss Family Treehouse (MK) – se tiverem Lightning Lane ativo.</li>
+          <li>Disney &amp; Pixar Short Film Festival (EPCOT)</li>
+          <li>Turtle Talk with Crush (EPCOT) em horários fora de pico.</li>
+          <li>TriceraTop Spin (AK), em dias de movimento moderado.</li>
+        </ul>
+      </li>
+    </ul>
+
+    <p class="muted">
+      <strong>Dica Dirceu:</strong> use o Lightning Lane nas atrações com filas de 60–120 minutos. 
+      Para shows e atrações de 10–20 minutos de fila, é melhor guardar seu Multi Pass para algo mais “pesado”.
+    </p>
+
+    <p class="muted">
+      <strong>Outra dica:</strong> combine Multi Pass + Single Pass estrategicamente. 
+      Exemplo: em um dia de Magic Kingdom, usar Multi Pass em Tiana + Jungle Cruise + Peter Pan, 
+      e Single Pass em TRON ou Seven Dwarfs para otimizar ao máximo o dia.
+    </p>
+  </div>
+</section>
+
+    <!-- HOSPEDAGEM / RESORT FEES -->
+    <section class="section" id="hospedagem">
+      <div class="section-card">
+        <h2>Hospedagem e regiões</h2>
+        <p>
+          Escolha do hotel impacta tempo de deslocamento, custo de transporte e, principalmente, se haverá
+          cobrança de <strong>Resort Fee</strong> ou não.
+        </p>
+        <div class="cards">
+          <div class="card">
+            <h3>Área Disney / Lake Buena Vista</h3>
+            <ul>
+              <li>Ótima para foco em parques Disney e Disney Springs.</li>
+              <li>Muitos hotéis parceiros e resorts com transporte.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Área Universal / International Drive</h3>
+            <ul>
+              <li>Boa para Universal + vida noturna + restaurantes.</li>
+              <li>Muitos hotéis com acesso fácil aos parques.</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Kissimmee / Casas de temporada</h3>
+            <ul>
+              <li>Ideal para grupos grandes e famílias.</li>
+              <li>Maior espaço e possibilidade de cozinhar em casa.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="transporte">
+  <div class="section-card">
+    <h2>Transporte em Orlando</h2>
+    <p class="muted">
+      Informações importantes para quem vai alugar carro e dirigir na Flórida — incluindo documentos obrigatórios,
+      regras de pedágio e dicas para evitar problemas.
+    </p>
+
+    <h3 class="subsection-title">Aluguel de carro – documentos obrigatórios</h3>
+    <ul>
+      <li>
+        <strong>CNH física obrigatória:</strong> somente a carteira de motorista física brasileira é aceita nas locadoras
+        e pelas autoridades de trânsito.  
+      </li>
+      <li>
+        <strong>CNH digital (app da CNH Digital / CDT) não é válida</strong> nos EUA em hipótese alguma —  
+        não serve para retirar o carro e <strong>não é aceita para dirigir</strong>.
+      </li>
+      <li>
+        <strong>Cartão de crédito físico</strong> em nome do condutor principal é obrigatório para o depósito caução.  
+        (Cartões digitais como Apple Pay / Google Wallet não são aceitos para este processo.)
+      </li>
+      <li>
+        É permitido dirigir com a CNH brasileira válida durante estadias de turismo.  
+        Não é obrigatório a PID (Permissão Internacional), mas pode ajudar em caso de verificação mais detalhada.
+      </li>
+      <li>
+        O condutor adicional precisa estar presente na locadora para apresentar os documentos e assinar.
+      </li>
+    </ul>
+
+    <h3 class="subsection-title">Como funcionam os pedágios na Flórida</h3>
+    <p>
+      A Flórida utiliza principalmente sistemas de pedágio <strong>sem cabine</strong>, conhecidos como
+      <strong>Free Flow / Toll-By-Plate</strong>. Isso significa:
+    </p>
+    <ul>
+      <li>
+        <strong>Não existe cabine de pagamento em dinheiro</strong> na maioria das rodovias (Turnpike, SR-417, SR-528, etc.).
+      </li>
+      <li>
+        O carro simplesmente passa pelo pórtico e a placa é fotografada — o pedágio é cobrado automaticamente.
+      </li>
+      <li>
+        <strong>Nunca pare no pedágio:</strong> é perigoso e pode gerar multa; apenas continue dirigindo normalmente.
+      </li>
+      <li>
+        Por isso é extremamente recomendado ter um sistema de pagamento ativo antes de sair com o carro.
+      </li>
+    </ul>
+
+    <h3 class="subsection-title">Qual opção escolher para pagar pedágio?</h3>
+    <ul>
+      <li>
+        <strong>Via locadora de veículos:</strong>  
+        Todas oferecem um plano de pedágio (“toll service”, “e-toll”, “PlatePass” ou similar).  
+        É a opção mais simples, pois cobre todos os pedágios automaticamente.  
+        Normalmente você paga:  
+        – uma taxa diária de serviço (varia por locadora)  
+        – + o valor dos pedágios utilizados.
+      </li>
+
+      <li>
+        <strong>Serviços externos (antes da viagem):</strong>  
+        Algumas empresas vendem dispositivos próprios (ex.: Uni, E-PASS), mas o motorista precisa instalar no carro
+        e ainda assim pode gerar conflitos com o sistema da locadora.  
+        Só vale a pena para quem vem várias vezes ao ano.
+      </li>
+
+      <li>
+        <strong>Evite dirigir sem nenhum serviço de pedágio:</strong>  
+        Caso contrário, você pagará o “Toll-by-Plate + taxa administrativa” — que normalmente é mais caro.
+      </li>
+    </ul>
+
+    <h3 class="subsection-title">Dicas úteis ao dirigir em Orlando</h3>
+    <ul>
+      <li><strong>Velocidade:</strong> respeite sempre os limites; radares na Flórida são rígidos.</li>
+      <li><strong>Mantenha distância:</strong> o tráfego de Orlando pode ser rápido, principalmente em I-4 e Turnpike.</li>
+      <li><strong>Faixa de conversão à direita:</strong> no semáforo vermelho, é permitido virar à direita após parar completamente (a não ser que esteja sinalizado “NO TURN ON RED”).</li>
+      <li><strong>Escolha o carro certo:</strong> famílias grandes podem se beneficiar de SUVs ou minivans.</li>
+      <li><strong>Estacionamento nos parques:</strong> Disney, Universal e SeaWorld cobram estacionamento por veículo — verifique valores atualizados.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="section" id="estacionamento-parques">
+  <div class="section-card">
+    <h2>Valores de estacionamento nos parques de Orlando</h2>
+    <p class="muted">
+      Valores aproximados e sujeitos a alteração. Os parques atualizam esses preços 1–2 vezes por ano.
+    </p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>Parque</th>
+          <th>Tipo de estacionamento</th>
+          <th>Valor aproximado (US$)</th>
+          <th>Observações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- DISNEY -->
+        <tr>
+          <td><strong>Walt Disney World</strong><br>(Magic Kingdom, EPCOT, Hollywood Studios, Animal Kingdom)</td>
+          <td>Padrão</td>
+          <td>US$ 30–35</td>
+          <td>Estacionamento incluso para hóspedes Disney (para veículos padrão).</td>
+        </tr>
+        <tr>
+          <td>Disney</td>
+          <td>Preferred Parking</td>
+          <td>US$ 45–55</td>
+          <td>Mais próximo da entrada; valor varia por dia e parque.</td>
+        </tr>
+
+        <!-- UNIVERSAL -->
+        <tr>
+          <td><strong>Universal Orlando Resort</strong><br>(Universal Studios + Islands of Adventure)</td>
+          <td>Padrão</td>
+          <td>US$ 32</td>
+          <td>Após 18h, estacionamento custa US$ 10 (eventos podem alterar).</td>
+        </tr>
+        <tr>
+          <td>Universal</td>
+          <td>Preferred</td>
+          <td>US$ 60–75</td>
+          <td>Área mais próxima do CityWalk.</td>
+        </tr>
+        <tr>
+          <td>Universal</td>
+          <td>Valet</td>
+          <td>US$ 30–75</td>
+          <td>Valor varia por tempo e temporada.</td>
+        </tr>
+
+        <!-- SEAWORLD -->
+        <tr>
+          <td><strong>SeaWorld Orlando</strong></td>
+          <td>Padrão</td>
+          <td>US$ 30–32</td>
+          <td>Online costuma ter preço igual ao presencial.</td>
+        </tr>
+        <tr>
+          <td>SeaWorld</td>
+          <td>Preferred</td>
+          <td>US$ 45–55</td>
+          <td>Mais próximo da entrada.</td>
+        </tr>
+
+        <!-- BUSCH GARDENS -->
+        <tr>
+          <td><strong>Busch Gardens Tampa</strong></td>
+          <td>Padrão</td>
+          <td>US$ 30–32</td>
+          <td>O valor pode mudar em feriados e alta temporada.</td>
+        </tr>
+        <tr>
+          <td>Busch Gardens</td>
+          <td>Preferred</td>
+          <td>US$ 45–55</td>
+          <td>Estacionamento premium a poucos passos da entrada.</td>
+        </tr>
+
+        <!-- LEGOLAND -->
+        <tr>
+          <td><strong>LEGOLAND Florida</strong></td>
+          <td>Padrão</td>
+          <td>US$ 25</td>
+          <td>Pagamento online ou na entrada.</td>
+        </tr>
+        <tr>
+          <td>LEGOLAND</td>
+          <td>Preferred</td>
+          <td>US$ 35–40</td>
+          <td>Área premium mais próxima do portão.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="muted" style="margin-top:10px;">
+      Dica: se você pretende ficar em hotéis oficiais da Disney ou Universal, muitos oferecem transporte incluso, o que ajuda a economizar com estacionamento.
+    </p>
+  </div>
+</section>
+
+    <section class="section" id="compras">
+      <div class="section-card">
+        <h2>Compras</h2>
+        <ul>
+          <li>International &amp; Vineland Premium Outlets.</li>
+          <li>Florida Mall (eletrônicos, roupas, brinquedos).</li>
+          <li>Mall at Millenia (marcas de luxo).</li>
+        </ul>
+        <p class="muted">Lembre do <strong>sales tax</strong>, que é acrescentado no caixa.</p>
+      </div>
+    </section>
+
+    <!-- RESORT FEES -->
+    <section class="section" id="resort-fees">
+  <div class="section-card">
+    <h2>Resort Fees em Orlando</h2>
+    <p>
+      Muitos hotéis cobram uma taxa diária extra chamada <strong>Resort Fee</strong>, normalmente paga no
+      check-in ou checkout, por quarto, por noite. Ela costuma incluir itens como Wi-Fi, academia, transporte
+      para parques, uso de áreas de lazer, entre outros.
+    </p>
+    <p class="muted">
+      <strong>Importante:</strong> os valores abaixo são aproximados, servem apenas como referência e podem
+      mudar sem aviso. Sempre confirme diretamente com o hotel ou com seu agente na hora da reserva.
+    </p>
+
+    <!-- Campo de busca por hotel -->
+    <div style="margin: 14px 0 4px;">
+      <label for="hotelSearch" class="muted" style="display:block;margin-bottom:4px;">
+        Buscar por nome do hotel (ex.: "Rosen", "Magic Moment", "Ramada"):
+      </label>
+      <input
+        type="text"
+        id="hotelSearch"
+        placeholder="Digite parte do nome do hotel..."
+        style="width:100%;max-width:380px;padding:7px 10px;border-radius:999px;border:1px solid #cbd5e1;font-size:13px;"
+      />
+      <div class="muted" style="margin-top:4px;font-size:12px;">
+        A tabela abaixo será filtrada conforme você digitar.
+      </div>
+    </div>
+
+    <table id="resortFeesTable">
+      <thead>
+        <tr>
+          <th>Hotel</th>
+          <th>Região</th>
+          <th>Resort Fee (aprox. US$/noite)</th>
+          <th>Inclui (em geral)</th>
+          <th>Observações</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- ========== DISNEY SPRINGS / ÁREA DISNEY ========== -->
+        <tr>
+          <td>Wyndham Lake Buena Vista – Disney Springs Area</td>
+          <td>Disney Springs</td>
+          <td>~ US$ 36 + impostos (≈ 40–41)</td>
+          <td>Wi-Fi, piscinas, academia, atividades.</td>
+          <td>Resort fee + estacionamento pago à parte.</td>
+        </tr>
+        <tr>
+          <td>Wyndham Garden Lake Buena Vista – Disney Springs</td>
+          <td>Disney Springs</td>
+          <td>~ US$ 25–30 + impostos</td>
+          <td>Wi-Fi, uso das áreas comuns, transporte programado.</td>
+          <td>Valor pode variar conforme canal de venda.</td>
+        </tr>
+        <tr>
+          <td>Hilton Orlando Buena Vista Palace – Disney Springs Area</td>
+          <td>Disney Springs</td>
+          <td>~ US$ 35–40 + impostos</td>
+          <td>Wi-Fi, academia, transporte, facilidades de resort.</td>
+          <td>Confirmar também taxa de estacionamento.</td>
+        </tr>
+        <tr>
+          <td>Hilton Orlando Lake Buena Vista – Disney Springs Area</td>
+          <td>Disney Springs</td>
+          <td>~ US$ 35–40 + impostos</td>
+          <td>Wi-Fi, acesso à piscina, transporte programado.</td>
+          <td>Resort fee + possível cobrança de estacionamento.</td>
+        </tr>
+        <tr>
+          <td>Holiday Inn Orlando – Disney Springs Area</td>
+          <td>Disney Springs</td>
+          <td>~ US$ 30 + impostos</td>
+          <td>Wi-Fi, academia, transporte para parques selecionados.</td>
+          <td>Taxas e inclusões podem mudar por temporada.</td>
+        </tr>
+        <tr>
+          <td>Renaissance Orlando Resort – Disney Springs Area</td>
+          <td>Disney Springs</td>
+          <td>~ US$ 30 + impostos</td>
+          <td>Wi-Fi, academia, uso das instalações de resort.</td>
+          <td>Verificar política de estacionamento.</td>
+        </tr>
+        <tr>
+          <td>Walt Disney World Dolphin</td>
+          <td>Área Disney / BoardWalk</td>
+          <td>~ US$ 35 + impostos</td>
+          <td>Wi-Fi, acesso às piscinas, academia.</td>
+          <td>Resort fee + estacionamento; segue padrão Swan/Dolphin.</td>
+        </tr>
+        <tr>
+          <td>Walt Disney World Swan</td>
+          <td>Área Disney / BoardWalk</td>
+          <td>~ US$ 35 + impostos</td>
+          <td>Wi-Fi, piscinas, academia, transporte Disney.</td>
+          <td>Taxas podem mudar; checar direto no hotel.</td>
+        </tr>
+        <tr>
+          <td>Walt Disney World Swan Reserve</td>
+          <td>Área Disney / BoardWalk</td>
+          <td>~ US$ 35 + impostos</td>
+          <td>Wi-Fi, academia, piscinas, facilidades de resort.</td>
+          <td>Mesma faixa dos outros Swan/Dolphin.</td>
+        </tr>
+        <tr>
+          <td>Signia by Hilton Orlando Bonnet Creek</td>
+          <td>Bonnet Creek (próx. Disney)</td>
+          <td>~ US$ 45–50 + impostos</td>
+          <td>Wi-Fi, piscinas, academia, facilidades de resort.</td>
+          <td>Hotel off-site premium, resort fee + estacionamento.</td>
+        </tr>
+        <tr>
+          <td>Waldorf Astoria Orlando</td>
+          <td>Bonnet Creek (próx. Disney)</td>
+          <td>~ US$ 45–50 + impostos</td>
+          <td>Wi-Fi, piscinas, academia, facilidades de luxo.</td>
+          <td>Resort de alto padrão, verificar taxas atualizadas.</td>
+        </tr>
+
+        <!-- HOTÉIS EM DISNEY SPRINGS / DISNEY SEM RESORT FEE -->
+        <tr>
+          <td>Drury Plaza Hotel Orlando – Disney Springs Area</td>
+          <td>Disney Springs</td>
+          <td><strong>Não cobra resort fee</strong></td>
+          <td>Café quente, Wi-Fi, lanchinhos da tarde, piscina.</td>
+          <td>Estacionamento geralmente cobrado à parte.</td>
+        </tr>
+        <tr>
+          <td>DoubleTree Suites by Hilton Orlando – Disney Springs Area</td>
+          <td>Disney Springs</td>
+          <td><strong>Normalmente sem resort fee</strong></td>
+          <td>Wi-Fi, academia, piscina.</td>
+          <td>Confirmar apenas taxas de estacionamento e extras.</td>
+        </tr>
+        <tr>
+          <td>Four Seasons Resort Orlando at Walt Disney World</td>
+          <td>Dentro do complexo Disney</td>
+          <td><strong>Em geral sem resort fee</strong></td>
+          <td>Serviços de luxo, Wi-Fi, piscinas, clube infantil.</td>
+          <td>Custos altos de diária; outras taxas podem existir.</td>
+        </tr>
+        <tr>
+          <td>Hotéis Disney (Pop, All-Star, Caribbean, Coronado, etc.)</td>
+          <td>Dentro do complexo Disney</td>
+          <td><strong>Não costumam cobrar resort fee</strong></td>
+          <td>Wi-Fi, transporte Disney, uso de piscinas.</td>
+          <td>Ver apenas estacionamento e eventuais cobranças específicas.</td>
+        </tr>
+
+        <!-- ========== INTERNATIONAL DRIVE (I-DRIVE / SEAWORLD / CONVENTION CENTER) ========== -->
+        <tr>
+          <td>Hyatt Regency Orlando</td>
+          <td>International Drive / Convention Center</td>
+          <td>~ US$ 48 + impostos</td>
+          <td>Wi-Fi premium, academia, piscinas, facilidades de resort.</td>
+          <td>Resort fee diária obrigatória + estacionamento pago.</td>
+        </tr>
+        <tr>
+          <td>DoubleTree by Hilton Hotel Orlando at SeaWorld</td>
+          <td>International Drive / SeaWorld</td>
+          <td>~ US$ 28 + impostos</td>
+          <td>Wi-Fi, piscina, academia, shuttle para parques.</td>
+          <td>Valor informado por OTAs, pode variar levemente.</td>
+        </tr>
+        <tr>
+          <td>Sonesta ES Suites Orlando – International Drive</td>
+          <td>International Drive (ICON Park)</td>
+          <td>~ US$ 17–19 + impostos</td>
+          <td>Wi-Fi, estacionamento, shuttle, acesso a áreas comuns.</td>
+          <td>Alguns pacotes já incluem a taxa no preço.</td>
+        </tr>
+        <tr>
+          <td>Avanti International Resort</td>
+          <td>International Drive</td>
+          <td>≈ US$ 18 + impostos</td>
+          <td>Wi-Fi, shuttles, estacionamento, academia.</td>
+          <td>Resort fee clara no site oficial.</td>
+        </tr>
+        <tr>
+          <td>Avanti Palms Resort &amp; Conference Center</td>
+          <td>International Drive (próx. Universal)</td>
+          <td>~ US$ 18–20 + impostos</td>
+          <td>Wi-Fi, piscina, shuttle para parques, academia.</td>
+          <td>Taxa obrigatória paga no check-in.</td>
+        </tr>
+        <tr>
+          <td>CoCo Key Hotel and Water Resort – Orlando</td>
+          <td>International Drive</td>
+          <td>~ US$ 45–50 + impostos</td>
+          <td>Acesso ao parque aquático do hotel, Wi-Fi, piscina.</td>
+          <td>Inclui entradas para o water park; estacionamento costuma ser extra.</td>
+        </tr>
+
+        <!-- ROSEN & OUTROS I-DRIVE SEM RESORT FEE (AGORA COM ESTACIONAMENTO PAGO) -->
+        <tr>
+          <td>Rosen Inn at Pointe Orlando</td>
+          <td>International Drive</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Wi-Fi, estrutura básica, shuttles selecionados.</td>
+          <td>
+            Agora cobra estacionamento: ~US$ 10 por noite por carro (máx. 5 noites / US$ 50 por carro).
+          </td>
+        </tr>
+        <tr>
+          <td>Rosen Inn International</td>
+          <td>International Drive</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Wi-Fi, estrutura básica, transporte selecionado.</td>
+          <td>
+            Agora cobra estacionamento: ~US$ 10 por noite por carro (máx. 5 noites / US$ 50 por carro).
+          </td>
+        </tr>
+        <tr>
+          <td>Rosen Inn (Closest to Universal)</td>
+          <td>International Drive / Universal</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Wi-Fi, estrutura básica, shuttle para parques.</td>
+          <td>
+            Agora cobra estacionamento: ~US$ 10 por noite por carro (máx. 5 noites / US$ 50 por carro).
+          </td>
+        </tr>
+        <tr>
+          <td>Rosen Plaza Hotel</td>
+          <td>International Drive / Convention Center</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Wi-Fi, piscina, academia.</td>
+          <td>
+            Sem resort fee, mas cobra estacionamento (~US$ 10 por noite por carro, mesmo padrão Rosen).
+          </td>
+        </tr>
+        <tr>
+          <td>Rosen Centre Hotel</td>
+          <td>International Drive / Convention Center</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Wi-Fi, piscina, academia, estrutura de resort.</td>
+          <td>
+            Sem resort fee, porém cobra estacionamento (~US$ 10/noite por carro, limite 5 noites).
+          </td>
+        </tr>
+        <tr>
+          <td>Ramada Plaza / Ramada by Wyndham na I-Drive (exemplos)</td>
+          <td>International Drive</td>
+          <td>Normalmente entre US$ 10 e US$ 25 + impostos</td>
+          <td>Wi-Fi, piscina, amenidades básicas.</td>
+          <td>Regras variam bastante por propriedade; conferir sempre no voucher.</td>
+        </tr>
+        <tr>
+          <td>Sheraton Vistana Villages Resort Villas (I-Drive)</td>
+          <td>International Drive / área resort</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Vilas com cozinha, Wi-Fi, várias piscinas.</td>
+          <td>Marriott informa explicitamente que não há resort fee.</td>
+        </tr>
+        <tr>
+          <td>Outros hotéis em International Drive</td>
+          <td>International Drive</td>
+          <td>~ US$ 10–40 + impostos (quando cobrado)</td>
+          <td>Geralmente Wi-Fi, academia, piscina, transporte.</td>
+          <td>Verificar em cada hotel, pois muitos mudam valor ou isentam a taxa.</td>
+        </tr>
+
+        <!-- ========== LAKE BUENA VISTA / SR 535 / MARRIOTT VILLAGE ========== -->
+        <tr>
+          <td>Holiday Inn Resort Orlando – Lake Buena Vista</td>
+          <td>Lake Buena Vista / SR 535</td>
+          <td>US$ 30 + impostos</td>
+          <td>Shuttle para Disney/SeaWorld/Universal, Wi-Fi, atividades.</td>
+          <td>Resort fee descrita no FAQ oficial do hotel.</td>
+        </tr>
+        <tr>
+          <td>Lake Buena Vista Resort Village &amp; Spa</td>
+          <td>Lake Buena Vista</td>
+          <td>~ US$ 21–24 + 12,5% impostos</td>
+          <td>Wi-Fi, estacionamento, facilidades de resort.</td>
+          <td>Valor exato depende do canal (alguns já incluem ou isentam).</td>
+        </tr>
+        <tr>
+          <td>Fairfield Inn &amp; Suites Orlando Lake Buena Vista</td>
+          <td>Lake Buena Vista</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Café da manhã, Wi-Fi, transporte programado.</td>
+          <td>Hotel Good Neighbor Disney, sem taxa obrigatória.</td>
+        </tr>
+        <tr>
+          <td>Fairfield Inn &amp; Suites LBV – Marriott Village</td>
+          <td>Lake Buena Vista / Marriott Village</td>
+          <td>~ US$ 5 por noite (destination fee)</td>
+          <td>Crédito diário F&amp;B, Wi-Fi aprimorado, transporte.</td>
+          <td>Algumas tarifas já incluem ou isentam essa taxa.</td>
+        </tr>
+        <tr>
+          <td>Courtyard Orlando Lake Buena Vista at Vista Centre</td>
+          <td>Lake Buena Vista</td>
+          <td>~ US$ 11–12 por noite (destination fee)</td>
+          <td>Wi-Fi, facilidades de resort, piscinas.</td>
+          <td>Além da destination fee, cobra estacionamento diário.</td>
+        </tr>
+        <tr>
+          <td>Sheraton Vistana Resort Villas (Lake Buena Vista)</td>
+          <td>Lake Buena Vista</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Vilas completas, Wi-Fi, múltiplas piscinas.</td>
+          <td>Marketing oficial reforça “no resort fees”.</td>
+        </tr>
+        <tr>
+          <td>Outros hotéis em Lake Buena Vista</td>
+          <td>Lake Buena Vista / SR 535</td>
+          <td>~ US$ 10–45 + impostos (quando cobrado)</td>
+          <td>Em geral Wi-Fi, academia, transporte, áreas de lazer.</td>
+          <td>Verificar sempre na confirmação, pois alguns cobram destination/resort fee.</td>
+        </tr>
+
+        <!-- ========== KISSIMMEE / HIGHWAY 192 / MAINGATE ========== -->
+        <tr>
+          <td>Vacation Village at Parkway</td>
+          <td>Kissimmee (próx. I-4)</td>
+          <td>~ US$ 15 + impostos</td>
+          <td>Wi-Fi, facilidades de resort, segurança 24h.</td>
+          <td>Para “exchangers” pode haver taxa por reserva em vez de diária.</td>
+        </tr>
+        <tr>
+          <td>Legacy Vacation Resorts – Kissimmee/Orlando</td>
+          <td>Kissimmee</td>
+          <td>~ US$ 12,99 + impostos (≈ 14–15)</td>
+          <td>Wi-Fi, acesso à academia, piscina, cofre, chamadas locais.</td>
+          <td>Taxa diária obrigatória, paga no check-out.</td>
+        </tr>
+        <tr>
+          <td>Orbit One Vacation Villas</td>
+          <td>Kissimmee (próx. Maingate)</td>
+          <td>US$ 25 + impostos</td>
+          <td>Wi-Fi, acesso a quadras, piscinas, business center.</td>
+          <td>Resort fee diária + caução no check-in.</td>
+        </tr>
+        <tr>
+          <td>Holiday Inn Resort Kissimmee by the Parks</td>
+          <td>Kissimmee (West 192)</td>
+          <td>~ US$ 17,50–20 + impostos</td>
+          <td>Wi-Fi, transporte para parques, água, atividades.</td>
+          <td>OTAs mostram valores ligeiramente diferentes, mas mesma faixa.</td>
+        </tr>
+        <tr>
+          <td>The Galleria Palms Hotel</td>
+          <td>Kissimmee (Maingate)</td>
+          <td>US$ 15,49 + 13,5% impostos</td>
+          <td>Wi-Fi, serviços básicos de hotel.</td>
+          <td>Resort fee detalhada nos termos e condições.</td>
+        </tr>
+        <tr>
+          <td>Best Western Plus Orlando Lake Buena Vista South Inn &amp; Suites</td>
+          <td>Kissimmee / LBV South</td>
+          <td>~ US$ 11,99 por dia</td>
+          <td>Wi-Fi, facilidades básicas, café em algumas tarifas.</td>
+          <td>Em alguns sites, a tarifa já inclui o resort fee.</td>
+        </tr>
+        <tr>
+          <td>Magic Moment Resort &amp; Kids Club</strong></td>
+          <td>Kissimmee (US-192)</td>
+          <td>≈ US$ 34,04 por acomodação, por noite</td>
+          <td>
+            Business center, acesso à academia, café no quarto, cofre, lavanderia self-service,
+            chamadas locais, acesso à piscina.
+          </td>
+          <td>
+            Resort fee obrigatória cobrada no hotel (valor informado por várias OTAs).
+          </td>
+        </tr>
+        <tr>
+          <td>Ramada by Wyndham Kissimmee Gateway</strong></td>
+          <td>Kissimmee (US-192 / Maingate)</td>
+          <td>≈ US$ 20,43 por acomodação, por noite</td>
+          <td>
+            Acesso à academia, piscina, toalhas de piscina, café no quarto, shuttle para parques,
+            chamadas locais, Wi-Fi.
+          </td>
+          <td>
+            Resort fee diária obrigatória; estacionamento costuma ser gratuito para hóspedes.
+          </td>
+        </tr>
+        <tr>
+          <td>Magic Key (No Resort Fee)</td>
+          <td>Kissimmee</td>
+          <td><strong>Sem resort fee</strong></td>
+          <td>Wi-Fi, piscina, estacionamento.</td>
+          <td>Vários canais destacam “No Resort Fee” no nome.</td>
+        </tr>
+        <tr>
+          <td>Outros hotéis em Kissimmee (192)</td>
+          <td>Kissimmee</td>
+          <td>Geralmente entre US$ 7 e US$ 25 + impostos</td>
+          <td>Normalmente Wi-Fi, estacionamento, algumas facilidades extras.</td>
+          <td>Muitos hotéis da 192 cobram resort/amenity fee; confirme sempre antes.</td>
+        </tr>
+
+        <!-- ========== LINHAS GERAIS PARA ORLANDO ========== -->
+        <tr>
+          <td>Outros hotéis econômicos sem resort fee</td>
+          <td>Diversas áreas</td>
+          <td>US$ 0</td>
+          <td>Serviços básicos; às vezes Wi-Fi incluso.</td>
+          <td>Opção para quem quer reduzir custo fixo por noite.</td>
+        </tr>
+        <tr>
+          <td>Outros hotéis com resort fee em Orlando</td>
+          <td>Diversas áreas</td>
+          <td>Normalmente entre US$ 15 e US$ 50 + impostos</td>
+          <td>Wi-Fi, academia, piscina, transporte, etc.</td>
+          <td>Valores mudam com frequência; sempre verificar na reserva.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p class="muted">
+      <strong>IMPORTANTE: OS VALORES PODEM MUDAR SEM AVISO PRÉVIO
+    </p>
+  </div>
+</section>
+
+<section class="section" id="dicas-orlando">
+  <div class="section-card">
+    <h2>Dicas Essenciais para Orlando</h2>
+    <p>Selecionamos as melhores dicas para aproveitar Orlando ao máximo, incluindo épocas ideais, restaurantes brasileiros, transporte, compras e truques valiosos.</p>
+
+    <!-- ÉPOCAS BOAS -->
+    <h3 class="subsection-title">1. Melhores épocas para viajar</h3>
+    <ul>
+      <li><strong>Janeiro e Fevereiro:</strong> clima agradável e parques mais vazios após o dia 10 de janeiro.</li>
+      <li><strong>Maio:</strong> ótima combinação de clima e filas moderadas.</li>
+      <li><strong>Final de Agosto e Setembro:</strong> calor forte, mas parques muito vazios.</li>
+      <li><strong>Início de Novembro:</strong> clima perfeito e multidões controladas.</li>
+      <li><strong>Evite:</strong> semana do Spring Break (março), 4 de julho, semana entre Natal e Ano Novo — são os períodos mais lotados do ano.</li>
+    </ul>
+
+    <!-- RESTAURANTES BRASIL -->
+    <h3 class="subsection-title">2. Restaurantes brasileiros em Orlando e Kissimmee</h3>
+    <p>Para matar a saudade da comida brasileira, Orlando e Kissimmee têm excelentes opções:</p>
+
+    <h4>2.1. Orlando</h4>
+    <ul>
+      <li><strong>Camila’s Restaurant:</strong> tradicional self-service brasileiro.</li>
+      <li><strong>Fogo de Chão Orlando:</strong> churrascaria premium com carnes de alta qualidade.</li>
+      <li><strong>Picanha Grill:</strong> buffet brasileiro muito popular entre turistas.</li>
+      <li><strong>Boteco do Manolo:</strong> pratos brasileiros, porções fartas e ótimo preço.</li>
+      <li><strong>Mrs. Potato:</strong> famoso por suas batatas recheadas estilo rosti.</li>
+      <li><strong>Brasil Food (Supermercado + Restaurante):</strong> ótimo para comprar produtos brasileiros.</li>
+    </ul>
+
+    <h4>2.2. Kissimmee</h4>
+    <ul>
+      <li><strong>Village Inn Restaurant Brasileiro:</strong> comida caseira e ótimo custo-benefício.</li>
+      <li><strong>Apolônio Brazilian Restaurant:</strong> churrasco e buffet variado.</li>
+      <li><strong>Seabra Foods (mercado brasileiro):</strong> vende pão de queijo, carnes e produtos BR.</li>
+      <li><strong>O Brasa Steakhouse:</strong> muito elogiado entre brasileiros.</li>
+      <li><strong>Chicken House:</strong> frango assado estilo brasileiro, barato e delicioso.</li>
+    </ul>
+
+    <!-- PARQUES -->
+    <h3 class="subsection-title">3. Dicas valiosas para parques</h3>
+    <ul>
+      <li><strong>Chegue cedo (rope drop):</strong> A 1ª hora do dia tem filas muito menores.</li>
+      <li><strong>Use o Mobile Order:</strong> evita filas enormes nos restaurantes Disney.</li>
+      <li><strong>Hidrate-se:</strong> água é gratuita em qualquer quick-service (peça “a cup of water”).</li>
+      <li><strong>Protetor solar sempre:</strong> o sol da Flórida é muito forte mesmo no inverno.</li>
+      <li><strong>Leve capa de chuva barata:</strong> comprar no parque sai caro.</li>
+      <li><strong>Use Lightning Lane estrategicamente:</strong> priorize atrações com 60+ minutos de fila.</li>
+      <li><strong>Reserve 2 dias para Magic Kingdom</strong> se estiver com crianças.</li>
+      <li><strong>Nos dias de Universal + Volcano Bay:</strong> prefira ir ao Volcano Bay cedo e Universal à tarde.</li>
+    </ul>
+
+    <!-- ECONOMIA -->
+    <h3 class="subsection-title">4. Dicas para economizar</h3>
+    <ul>
+      <li><strong>Compre água e snacks no Walmart/Target:</strong> economiza muito comparado aos parques.</li>
+      <li><strong>Gasolina:</strong> use Waze para encontrar postos mais baratos; em geral, Wawa e Racetrac têm bons preços.</li>
+      <li><strong>Evite estacionar em Disney Springs</strong> para ir aos parques — eles bloqueiam a prática.</li>
+      <li><strong>Outlet Vineland:</strong> costuma ser mais organizado e tem melhores ofertas.</li>
+      <li><strong>Leve mochila com lanche:</strong> permitido na Disney e Universal.</li>
+    </ul>
+
+    <!-- COMPRAS -->
+    <h3 class="subsection-title">5. Dicas para compras</h3>
+    <ul>
+      <li><strong>Outlets bons:</strong> Vineland Premium e International Drive Premium.</li>
+      <li><strong>Eletrônicos:</strong> Best Buy, Target e Amazon Locker.</li>
+      <li><strong>Perfumes e cosméticos:</strong> Ross e Marshall’s têm preços excelentes.</li>
+      <li><strong>Cupons:</strong> sempre pesquise por “Premium Outlets coupons Orlando” antes de ir.</li>
+    </ul>
+
+    <!-- TRANSPORTE -->
+    <h3 class="subsection-title">6. Dicas de transporte</h3>
+    <ul>
+      <li><strong>Aluguel de carro:</strong> facilita muito em Orlando.</li>
+      <li><strong>Pedágios:</strong> a maioria é automática (não pare!); contrate o serviço da locadora.</li>
+      <li><strong>CNH Física obrigatória:</strong> CNH digital NÃO é aceita nos EUA.</li>
+      <li><strong>Aplicativos úteis:</strong> Uber, Lyft, Waze, Google Maps.</li>
+      <li><strong>Estacionamentos dos parques:</strong> variam entre US$ 25 e US$ 35.</li>
+    </ul>
+
+    <!-- DICAS PREMIUM -->
+    <h3 class="subsection-title">7. Dicas valiosas que poucos sabem</h3>
+    <ul>
+      <li><strong>Universal:</strong> no fim do dia, filas caem muito após as 18h.</li>
+      <li><strong>Disney:</strong> horários de fogos variam conforme época – sempre confira no app.</li>
+      <li><strong>Animal Kingdom:</strong> Safári é melhor ao abrir ou ao entardecer.</li>
+      <li><strong>Magic Kingdom:</strong> PeopleMover e Carrossel do Progresso quase sempre sem fila.</li>
+      <li><strong>SeaWorld:</strong> assista ao show das orcas cedo – lota rápido.</li>
+      <li><strong>Restaurantes disputados:</strong> reserve no app com 60 dias de antecedência.</li>
+    </ul>
+
+    <p class="muted">
+      <strong>Dica Dirceu:</strong> Para economizar tempo, planeje sempre começando pelos parques que têm as atrações mais concorridas e utilize Mobile Order e Lightning Lane sempre que possível.
+    </p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  © <span id="ano"></span> Guia de Orlando by Dirceu – Conteúdo em português
+</footer>
+
+<script>
+  // Atualiza ano do rodapé
+  const anoSpan = document.getElementById('ano');
+  if (anoSpan) {
+    anoSpan.textContent = new Date().getFullYear();
+  }
+
+  // Filtro da tabela de resort fees
+  const searchInput = document.getElementById('hotelSearch');
+  const table = document.getElementById('resortFeesTable');
+
+  if (searchInput && table) {
+    const rows = Array.from(table.querySelectorAll('tbody tr'));
+    searchInput.addEventListener('input', () => {
+      const term = searchInput.value.toLowerCase().trim();
+      rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        row.style.display = term === '' || text.includes(term) ? '' : 'none';
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
